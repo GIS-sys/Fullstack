@@ -9,27 +9,28 @@ import Header from "./base/Header";
 
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
-import {useState} from 'react';
-import {useEffect} from 'react';
-
 
 
 function App() {
   return (
-    <div>
+    <div width="100vw" height="100vh">
       <Header/>
-      <Router>
-        <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/account' element={<Account/>}/>
-          <Route path='/login' element={<Login/>}/>
-          <Route path='/signup' element={<Signup/>}/>
-          <Route path='/search' element={<Search/>}/>
-        </Routes>
-      </Router>
+      <div id="content-wrapper">
+        <Router>
+          <Routes>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/account' element={<Account/>}/>
+            <Route path='/login' element={<Login/>}/>
+            <Route path='/signup' element={<Signup/>}/>
+            <Route path='/search' element={<Search/>}/>
+          </Routes>
+        </Router>
+      </div>
       <Footer/>
     </div>
   );
 }
+
+
 
 export default App;

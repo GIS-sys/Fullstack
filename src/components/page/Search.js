@@ -1,6 +1,6 @@
 function Search(props) {
   return (
-    <div>
+    <div class="div">
       Hello Search!
     </div>
   );

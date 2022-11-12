@@ -1,8 +1,10 @@
 function Footer(props) {
   return (
-    <div>
-      <h1>Real footer!</h1>
-    </div>
+    <div id="footer-wrapper">
+		  <footer id="footer">
+        <p>Footer...</p>
+      </footer>
+	  </div>
   );
 }
 

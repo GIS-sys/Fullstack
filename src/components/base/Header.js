@@ -1,8 +1,10 @@
 function Header(props) {
   return (
-    <div>
-      <h1>Real header!</h1>
-    </div>
+    <div id="header-wrapper">
+		  <footer id="header">
+        <p>Header...</p>
+      </footer>
+	  </div>
   );
 }
 

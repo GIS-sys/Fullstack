@@ -3,19 +3,19 @@ function apiLogin(username, password) {
 }
 
 function apiGetUserData(username, password) {
-  return {"email": "user_email", "fullname": "user_fullname", "date_of_birth": "user_date_of_birth"};
+  return {"email": "api_user_email", "fullname": "api_user_fullname", "date_of_birth": "api_user_date_of_birth"};
 }
 
 function apiGetUserFiles(username, password) {
   return [
-    {"id": "1", "filename": "asd", "is_deleted": false},
-    {"id": "2", "filename": "vcb", "is_deleted": true},
-    {"id": "3", "filename": "zerg", "is_deleted": false},
+    {"id": "1", "filename": "первый файл", "is_deleted": false},
+    {"id": "2", "filename": "второй файл", "is_deleted": true},
+    {"id": "3", "filename": "третий файл", "is_deleted": false},
   ];
 }
 
 function apiUploadFile(username, fileName, originalName, fileText) {
-  alert("Uploading file " + originalName + " (known as " + fileName + ") for user " + username + " with data:\n" + fileText);
+  alert("Загружаем файл " + originalName + " (также известен как " + fileName + ") для юзера " + username + " с текстом:\n" + fileText);
 }
 
 function apiRegister(username, password, fullname, email, date_of_birth) {
@@ -46,8 +46,8 @@ function apiDeleteFile(fileId) {
 
 function apiSearch(fileName, author, dateFrom, dateTo) {
   return [
-    {"id": "1", "filename": "aaa"+fileName, "author": author},
-    {"id": "2", "filename": fileName, "author": "bbb"+author}
+    {"id": "1", "filename": "просто_приставка_вначале_" + fileName, "author": author},
+    {"id": "2", "filename": fileName, "author": "просто_приставка_вначале_" + author}
   ];
 }
 

@@ -15,7 +15,7 @@ function App() {
   return (
     <div width="100vw" height="100vh">
       <Header/>
-      <div id="content-wrapper">
+      <div id="content-wrapper" style={{"margin": "0px"}}>
         <Router>
           <Routes>
             <Route path='/' element={<Home/>}/>

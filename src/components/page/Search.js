@@ -25,19 +25,19 @@ function Search(props) {
           <td style={{"width": "30%"}}>
           <form onSubmit={handleSubmit(searchHandler)}>
               <div>
-                  <label>File name</label>
+                  <label>Название файла</label>
                   <input {...register('filename')} />
               </div>
               <div>
-                  <label>Author</label>
+                  <label>Автор</label>
                   <input {...register('author')} />
               </div>
               <div>
-                  <label>Date from</label>
+                  <label>Дата (от)</label>
                   <input type="date" {...register('datefrom')} />
               </div>
               <div>
-                  <label>Date to</label>
+                  <label>Дата (по)</label>
                   <input type="date" {...register('dateto')} />
               </div>
               <button>Search</button>
@@ -46,8 +46,8 @@ function Search(props) {
           <td style={{"width": "60%"}}>
             {searchResults.map(elem => (
               <div key={elem.id}>
-                <p>File name: {elem.filename}. Author: {elem.author}.</p>
-                <button onClick={() => downloadFile(elem.id)}>Download</button>
+                <p>Название файла: {elem.filename}. Author: {elem.author}.</p>
+                <button onClick={() => downloadFile(elem.id)}>Скачать</button>
               </div>
             ))}
           </td>

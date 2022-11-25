@@ -35,18 +35,18 @@ function Account(props) {
       <tbody>
         <tr style={{"height": "66%"}}>
           <td style={{"width": "30%"}}>
-            <div><p>Username: {localStorage.getItem("username")}</p></div>
+            <div><p>Логин: {localStorage.getItem("username")}</p></div>
             <div><p>Email: {localStorage.getItem("email")}</p></div>
-            <div><p>Full name: {localStorage.getItem("fullname")}</p></div>
-            <div><p>Date of birth: {localStorage.getItem("date_of_birth")}</p></div>
-            <button onClick={signOut}>Sign out</button>
+            <div><p>Полное имя: {localStorage.getItem("fullname")}</p></div>
+            <div><p>Дата рождения: {localStorage.getItem("date_of_birth")}</p></div>
+            <button onClick={signOut}>Выйти из аккаунта</button>
           </td>
           <td rowSpan="2" style={{"width": "60%"}}>
             {files.map(elem => (
               <div key={elem.id}>
                 <p>{elem.filename}</p>
-                <button onClick={() => downloadFile(elem.id)}>Download</button>
-                <button onClick={() => deleteFile(elem.id)}>Delete</button>
+                <button onClick={() => downloadFile(elem.id)}>Скачать</button>
+                <button onClick={() => deleteFile(elem.id)}>Удалить</button>
               </div>
             ))}
           </td>
@@ -55,16 +55,16 @@ function Account(props) {
           <td style={{"width": "30%"}}>
             <form onSubmit={handleSubmit(addFileHandler)}>
               <div>
-                  <label>Name of file</label>
+                  <label>Название файла</label>
                   <input {...register('filename', { required: true })} />
                   {errors.filename && <p>Filename is required.</p>}
               </div>
               <div>
-                  <label>File</label>
+                  <label>Файл</label>
                   <input type='file' {...register('file', { required: true })} />
                   {errors.file && <p>File is required.</p>}
               </div>
-              <button>Upload file</button>
+              <button>Загрузить файл</button>
             </form>
           </td>
         </tr>

@@ -35,19 +35,19 @@ function Login(props) {
           <td style={{"width": "33%"}}>
             <form onSubmit={handleSubmit(loginHandler)}>
               <div>
-                  <label>Username</label>
+                  <label>Логин</label>
                   <input {...register('username', { required: true })} />
                   {errors.username && <p>Username is required.</p>}
               </div>
               <div>
-                  <label>Password</label>
+                  <label>Пароль</label>
                   <input {...register('password', { pattern: /.......*/ })} />
                   {errors.password && <p>Password must be at least 6 symbols long.</p>}
               </div>
-              <button>Log In</button>
+              <button>Авторизоваться</button>
             </form>
             <a href="/signup">
-              <button>Sign Up</button>
+              <button>Зарегистрироваться</button>
             </a>
           </td>
           <td style={{"width": "33%"}}></td>

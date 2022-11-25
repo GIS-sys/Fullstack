@@ -31,17 +31,17 @@ function Signup(props) {
           <td style={{"width": "33%"}}>
             <form onSubmit={handleSubmit(registrationHandler)}>
               <div>
-                  <label>Username</label>
+                  <label>Логин</label>
                   <input {...register('username', { required: true })} />
                   {errors.username && <p>Username is required.</p>}
               </div>
               <div>
-                  <label>Password</label>
+                  <label>Пароль</label>
                   <input type="password" {...register('password', { pattern: /.......*/, required: true })} />
                   {errors.password && <p>Password must be at least 6 symbols long.</p>}
               </div>
               <div>
-                  <label>Full name (3 words)</label>
+                  <label>Полное имя (3 слова)</label>
                   <input {...register('fullname', { pattern: /.+ .+ .+/, required: true })} />
                   {errors.fullname && <p>Full name must consist of 3 words separated by space.</p>}
               </div>
@@ -51,11 +51,11 @@ function Signup(props) {
                   {errors.email && <p>Email format is wrong.</p>}
               </div>
               <div>
-                  <label>Date of birth</label>
+                  <label>Дата рождения</label>
                   <input type="date" {...register('date_of_birth', { required: true })} />
                   {errors.date_of_birth && <p>Date? I mean, just simple date...</p>}
               </div>
-              <button>Sign Up</button>
+              <button>Зарегистрироваться</button>
             </form>
           </td>
           <td style={{"width": "33%"}}></td>

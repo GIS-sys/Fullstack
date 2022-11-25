@@ -18,7 +18,7 @@ function Header(props) {
     )
   }
   return (
-    <div id="header-wrapper">
+    <div id="header-wrapper" style={{"margin": "0px"}}>
 		  <nav id="header">
         <a href="/search">
           <button>Поиск</button>

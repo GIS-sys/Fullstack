@@ -1,8 +1,5 @@
-npm install react-router-dom
+To run website:
 
+1) ```npm install```
 
-TODO:
-
-account - delete and download
-
-search - everything
+2) ```npm run start```
